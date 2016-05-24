@@ -11,27 +11,33 @@
 
 @protocol JavaScriptObjectiveCDelegate <JSExport>
 /**
- *  js传递过来一个时机,弹出一个提示框
+ *  接收一个弹提示框的时机
  */
 - (void)alertSomething;
 /**
- *  JS传值
+ *  接收一个字符串
  *
  *  @param title js传递过来的字符串
  */
 - (void)passTheMessage:(NSString *)title;
-
-
-
-// JS调用此方法来调用OC的系统相册方法
-- (void)callSystemCamera;
-// 在JS中调用时，函数名应该为showAlertMsg(arg1, arg2)
-// 这里是只两个参数的。
-- (void)showAlert:(NSString *)title msg:(NSString *)msg;
-// 通过JSON传过来
-- (void)callWithDict:(NSDictionary *)params;
-// JS调用Oc，然后在OC中通过调用JS方法来传值给JS。
-- (void)jsCallObjcAndObjcCallJsWithDict:(NSDictionary *)params;
+/**
+ *  接收一个JSON
+ *
+ *  @param dic jsonDic
+ */
+- (void)passJSON:(NSDictionary *)dic;
+/**
+ *  接收一个字符串,然后像JS回调一个方法
+ *
+ *  @param msg 接收字符串
+ */
+- (void)passMessageAndCallBack:(NSString *)msg;
+/**
+ *  接收一个字符串然后判断是Pop还是Push
+ *
+ *  @param msg pop/push
+ */
+- (void)popPushWithMessage:(NSString *)msg;
 
 @end
 

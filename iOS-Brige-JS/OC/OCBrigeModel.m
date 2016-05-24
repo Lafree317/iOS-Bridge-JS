@@ -33,28 +33,39 @@
         [SVProgressHUD showInfoWithStatus:title];
     });
 }
-// Js调用了callSystemCamera
-- (void)callSystemCamera {
-    NSLog(@"JS调用了OC的方法，调起系统相册");
-    
-    // JS调用后OC后，又通过OC调用JS，但是这个是没有传参数的
-    JSValue *jsFunc = self.jsContext[@"jsFunc"];
-    [jsFunc callWithArguments:nil];
+/**
+ *  接收一个JSON
+ *
+ *  @param dic jsonDic
+ */
+- (void)passJSON:(NSDictionary *)dic{
+    NSLog(@"年龄:%@ 姓名:%@ 身高:%@",[dic valueForKey:@"age"],[dic valueForKey:@"name"],[dic valueForKey:@"height"]);
 }
-
-- (void)jsCallObjcAndObjcCallJsWithDict:(NSDictionary *)params {
-    NSLog(@"jsCallObjcAndObjcCallJsWithDict was called, params is %@", params);
-    
-    // 调用JS的方法
-    JSValue *jsParamFunc = self.jsContext[@"jsParamFunc"];
-    [jsParamFunc callWithArguments:@[@{@"age": @10, @"name": @"lili", @"height": @158}]];
-}
-
-- (void)showAlert:(NSString *)title msg:(NSString *)msg {
+/**
+ *  接收一个字符串,然后像JS回调一个方法
+ *
+ *  @param msg 接收字符串
+ */
+- (void)passMessageAndCallBack:(NSString *)msg{
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *a = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [a show];
+        [SVProgressHUD showInfoWithStatus:msg];
+        JSValue *jsParamFunc = self.jsContext[@"jsParamFunc"];
+        [jsParamFunc callWithArguments:@[@{@"name": @"客户端回调的参数"}]];
     });
 }
 
+/**
+ *  接收一个字符串然后判断是Pop还是Push
+ *
+ *  @param msg pop/push
+ */
+- (void)popPushWithMessage:(NSString *)msg{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([msg isEqualToString:@"pop"]) {
+            self.pop();
+        }else{
+            self.push();
+        }
+    });
+}
 @end

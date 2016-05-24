@@ -50,6 +50,14 @@
     self.jsContext[@"OCModel"] = model;
     model.jsContext = self.jsContext;
     model.webView = self.webView;
+    model.pop = ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    };
+    model.push = ^{
+        OCWebViewController *VC = [[OCWebViewController alloc] init];
+        [self showViewController:VC sender:nil];
+    };
     
     self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *exceptionValue) {
         context.exception = exceptionValue;

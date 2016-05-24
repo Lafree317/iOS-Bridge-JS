@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iOS-Brige-JS/OC/OCWebViewController.m"
-            timestampString = "485772421.413619"
+            filePath = "iOS-Brige-JS/OC/OCBrigeModel.m"
+            timestampString = "485775263.1119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-webViewDidFinishLoad:"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-popPushWithMessage:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
