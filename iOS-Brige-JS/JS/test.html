@@ -26,13 +26,13 @@
 <body>
 <!-- 提示框 -->
 <div style="margin-top: 100px">
-	<h1>iOS和JS敲网页Demo</h1>
+	<h1>iOS和JS桥的网页Demo</h1>
 	<input type="button" value="随便弹一个提示框" onclick="OCModel.alertSomething()">
 </div>
 
 <!-- 传值 -->
 <div style="margin-top: 10px">
-	<input type="button" value="Call ObjC system alert" onclick="OCModel.showAlertMsg('js title', 'js message')">
+	<input type="button" value="传递一个字符串给客户端" onclick="OCModel.passTheMessage('这个是由JS传递过来的参数')">
 </div>
 
 <!-- push pop -->

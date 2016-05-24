@@ -7,7 +7,7 @@
 //
 
 #import "OCWebViewController.h"
-
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "OCBrigeModel.h"
 
 @interface OCWebViewController ()<UIWebViewDelegate>
@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [SVProgressHUD setMinimumDismissTimeInterval:1];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.webView];
 }

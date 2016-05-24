@@ -10,9 +10,15 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @protocol JavaScriptObjectiveCDelegate <JSExport>
-// 随便弹一个提示框
+/**
+ *  js传递过来一个时机,弹出一个提示框
+ */
 - (void)alertSomething;
-// 传值
+/**
+ *  JS传值
+ *
+ *  @param title js传递过来的字符串
+ */
 - (void)passTheMessage:(NSString *)title;
 
 

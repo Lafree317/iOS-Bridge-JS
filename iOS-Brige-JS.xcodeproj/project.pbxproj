@@ -18,7 +18,23 @@
 		52AD6E911CF43C2700C1CCC9 /* OCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6E901CF43C2700C1CCC9 /* OCWebViewController.m */; };
 		52AD6E941CF43C4300C1CCC9 /* OCBrigeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6E931CF43C4300C1CCC9 /* OCBrigeModel.m */; };
 		52AD6E961CF43C7900C1CCC9 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AD6E951CF43C7900C1CCC9 /* JavaScriptCore.framework */; };
+		52AD6E9C1CF449BC00C1CCC9 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AD6E9B1CF449BC00C1CCC9 /* SVProgressHUD.framework */; };
+		52AD6E9D1CF449BC00C1CCC9 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52AD6E9B1CF449BC00C1CCC9 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52AD6E9A1CF4448200C1CCC9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52AD6E9D1CF449BC00C1CCC9 /* SVProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		52AD6E6F1CF43BCD00C1CCC9 /* iOS-Brige-JS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Brige-JS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +54,7 @@
 		52AD6E921CF43C4300C1CCC9 /* OCBrigeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCBrigeModel.h; sourceTree = "<group>"; };
 		52AD6E931CF43C4300C1CCC9 /* OCBrigeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCBrigeModel.m; sourceTree = "<group>"; };
 		52AD6E951CF43C7900C1CCC9 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		52AD6E9B1CF449BC00C1CCC9 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AD6E9C1CF449BC00C1CCC9 /* SVProgressHUD.framework in Frameworks */,
 				52AD6E961CF43C7900C1CCC9 /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +73,7 @@
 		52AD6E661CF43BCD00C1CCC9 = {
 			isa = PBXGroup;
 			children = (
+				52AD6E9B1CF449BC00C1CCC9 /* SVProgressHUD.framework */,
 				52AD6E951CF43C7900C1CCC9 /* JavaScriptCore.framework */,
 				52AD6E711CF43BCD00C1CCC9 /* iOS-Brige-JS */,
 				52AD6E701CF43BCD00C1CCC9 /* Products */,
@@ -125,6 +144,7 @@
 				52AD6E6B1CF43BCD00C1CCC9 /* Sources */,
 				52AD6E6C1CF43BCD00C1CCC9 /* Frameworks */,
 				52AD6E6D1CF43BCD00C1CCC9 /* Resources */,
+				52AD6E9A1CF4448200C1CCC9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,6 +323,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "iOS-Brige-JS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lafree.www.iOS-Brige-JS";
@@ -314,6 +338,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "iOS-Brige-JS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lafree.www.iOS-Brige-JS";

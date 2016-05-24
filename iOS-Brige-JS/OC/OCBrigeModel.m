@@ -7,21 +7,31 @@
 //
 
 #import "OCBrigeModel.h"
-
+#import <SVProgressHUD/SVProgressHUD.h>
 @implementation OCBrigeModel
 - (void)callWithDict:(NSDictionary *)params {
     NSLog(@"Js调用了OC的方法，参数为：%@", params);
 }
-// 随便弹一个提示框
+/**
+ *  js传递过来一个时机,弹出一个提示框
+ */
 - (void)alertSomething{
+    // js回调的方法默认都不在主线程
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"提示" message:@"随便弹一个提示框" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [a show];
+        
+        [SVProgressHUD showInfoWithStatus:@"弹一个提示框"];
     });
-}
-// 传值
-- (void)passTheMessage:(NSString *)title{
     
+}
+/**
+ *  JS传值
+ *
+ *  @param title js传递过来的字符串
+ */
+- (void)passTheMessage:(NSString *)title{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SVProgressHUD showInfoWithStatus:title];
+    });
 }
 // Js调用了callSystemCamera
 - (void)callSystemCamera {
