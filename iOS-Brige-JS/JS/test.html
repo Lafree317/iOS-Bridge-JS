@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>测试IOS与JS之前的互调</title>
+	<style type="text/css">
+	  * {
+	  	font-size: 40px;
+	  }
+	</style>
+  <script type="text/javascript">
+
+  var jsFunc = function() {
+    alert('Objective-C call js to show alert');
+  }
+  
+  var jsParamFunc = function(argument) {
+    document.getElementById('jsParamFuncSpan').innerHTML
+    = argument['name'];
+  }
+  
+  </script>
+  
+</head>
+
+<body>
+<!-- 提示框 -->
+<div style="margin-top: 100px">
+	<h1>iOS和JS敲网页Demo</h1>
+	<input type="button" value="随便弹一个提示框" onclick="OCModel.alertSomething()">
+</div>
+
+<!-- 传值 -->
+<div style="margin-top: 10px">
+	<input type="button" value="Call ObjC system alert" onclick="OCModel.showAlertMsg('js title', 'js message')">
+</div>
+
+<!-- push pop -->
+<div>
+	<input type="button" value="Call ObjC func with JSON " onclick="OCModel.callWithDict({'name': 'testname', 'age': 10, 'height': 170})">
+</div>
+
+<!-- 注入网页内容 -->
+<div>
+	<input type="button" value="Call ObjC func with JSON and ObjC call js func to pass args." onclick="OCModel.jsCallObjcAndObjcCallJsWithDict({'name': 'testname', 'age': 10, 'height': 170})">
+</div>
+
+<!-- 换页 -->
+<div>
+  <a href="test1.html">换下一个JS页面</a>
+</div>
+
+<div>
+	<span id="jsParamFuncSpan" style="color: red; font-size: 50px;"></span>
+</div>
+
+
+</body>
+</html>
