@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "OCWebViewController.h"
+#import "iOSBridgeJS-Swift.h"
 
 @interface ViewController ()
 
@@ -22,6 +24,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)OCClick:(UIButton *)sender {
+    [self showViewController:[OCWebViewController new] sender:nil];
+}
+- (IBAction)SwiftClick:(id)sender {
+    [self showViewController:[SwiftWebViewController new] sender:nil];
 }
 
 @end

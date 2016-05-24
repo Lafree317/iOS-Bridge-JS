@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52AD6E6E1CF43BCD00C1CCC9"
-               BuildableName = "iOS-Brige-JS.app"
-               BlueprintName = "iOS-Brige-JS"
-               ReferencedContainer = "container:iOS-Brige-JS.xcodeproj">
+               BlueprintIdentifier = "52E94DF51CF4652900F4CB09"
+               BuildableName = "iOSBridgeJS.app"
+               BlueprintName = "iOSBridgeJS"
+               ReferencedContainer = "container:iOSBridgeJS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52AD6E6E1CF43BCD00C1CCC9"
-            BuildableName = "iOS-Brige-JS.app"
-            BlueprintName = "iOS-Brige-JS"
-            ReferencedContainer = "container:iOS-Brige-JS.xcodeproj">
+            BlueprintIdentifier = "52E94DF51CF4652900F4CB09"
+            BuildableName = "iOSBridgeJS.app"
+            BlueprintName = "iOSBridgeJS"
+            ReferencedContainer = "container:iOSBridgeJS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52AD6E6E1CF43BCD00C1CCC9"
-            BuildableName = "iOS-Brige-JS.app"
-            BlueprintName = "iOS-Brige-JS"
-            ReferencedContainer = "container:iOS-Brige-JS.xcodeproj">
+            BlueprintIdentifier = "52E94DF51CF4652900F4CB09"
+            BuildableName = "iOSBridgeJS.app"
+            BlueprintName = "iOSBridgeJS"
+            ReferencedContainer = "container:iOSBridgeJS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52AD6E6E1CF43BCD00C1CCC9"
-            BuildableName = "iOS-Brige-JS.app"
-            BlueprintName = "iOS-Brige-JS"
-            ReferencedContainer = "container:iOS-Brige-JS.xcodeproj">
+            BlueprintIdentifier = "52E94DF51CF4652900F4CB09"
+            BuildableName = "iOSBridgeJS.app"
+            BlueprintName = "iOSBridgeJS"
+            ReferencedContainer = "container:iOSBridgeJS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

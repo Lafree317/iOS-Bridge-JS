@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>iOS-Brige-JS.xcscheme</key>
+		<key>iOSBridgeJS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>52AD6E6E1CF43BCD00C1CCC9</key>
+		<key>52E94DF51CF4652900F4CB09</key>
 		<dict>
 			<key>primary</key>
 			<true/>

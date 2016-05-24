@@ -12,9 +12,9 @@
 
 typedef void(^PopPushBlock)();
 
-@interface OCBrigeModel : NSObject <JavaScriptObjectiveCDelegate>
+@interface OCBridgeModel : NSObject <JavaScriptObjectiveCDelegate>
 @property (nonatomic, weak) JSContext *jsContext;
 @property (nonatomic, weak) UIWebView *webView;
-@property (copy, nonatomic) PopPushBlock pop;
-@property (copy, nonatomic) PopPushBlock push;
+@property (copy, nonatomic) PopPushBlock modal;
+@property (copy, nonatomic) PopPushBlock dismiss;
 @end

@@ -8,12 +8,7 @@
                     font-size: 40px;
                 }
             </style>
-            <script type="text/javascript">
-                
-                var jsFunc = function() {
-                    
-                }
-            
+            <script type="text/javascript">     
             // iOS回调的方法
             var jsParamFunc = function(argument) {
                 document.getElementById('jsParamFuncSpan').innerHTML
@@ -24,20 +19,20 @@
     </head>
     
     <body>
-        <!-- 提示框 -->
+        <!-- 提示客户端消失一个界面 -->
         <div style="margin-top: 100px">
             <h1>iOS和JS桥的网页Demo</h1>
-            <input type="button" value="pop一个页面" onclick="OCModel.popPushWithMessage('pop')">
+            <input type="button" value="dismiss一个页面" onclick="OCModel.popPushWithMessage('dismiss')">
         </div>
         
-        <!-- 传字符串-->
+        <!-- 提示客户端弹出一个界面 -->
         <div style="margin-top: 10px">
-            <input type="button" value="push一个页面" onclick="OCModel.popPushWithMessage('push')">
+            <input type="button" value="modal一个页面" onclick="OCModel.popPushWithMessage('modal')">
         </div>
         
         
         <!-- 换页 -->
-        <div>
+        <div style="margin-top: 20px">
             <a href="test.html">换回上一个JS页面</a>
         </div>
         

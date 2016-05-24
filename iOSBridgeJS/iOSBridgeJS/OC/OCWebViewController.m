@@ -8,7 +8,7 @@
 
 #import "OCWebViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "OCBrigeModel.h"
+#import "OCBridgeModel.h"
 
 @interface OCWebViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
@@ -46,15 +46,15 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     // 通过模型调用方法，这种方式更好些。
-    OCBrigeModel *model  = [[OCBrigeModel alloc] init];
+    OCBridgeModel *model  = [[OCBridgeModel alloc] init];
     self.jsContext[@"OCModel"] = model;
     model.jsContext = self.jsContext;
     model.webView = self.webView;
-    model.pop = ^{
+    model.dismiss = ^{
         [self dismissViewControllerAnimated:YES completion:nil];
         
     };
-    model.push = ^{
+    model.modal = ^{
         OCWebViewController *VC = [[OCWebViewController alloc] init];
         [self showViewController:VC sender:nil];
     };

@@ -35,7 +35,7 @@
 /**
  *  接收一个字符串然后判断是Pop还是Push
  *
- *  @param msg pop/push
+ *  @param msg modal/dismiss
  */
 - (void)popPushWithMessage:(NSString *)msg;
 

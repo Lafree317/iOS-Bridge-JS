@@ -6,9 +6,9 @@
 //  Copyright © 2016年 胡春源. All rights reserved.
 //
 
-#import "OCBrigeModel.h"
+#import "OCBridgeModel.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-@implementation OCBrigeModel
+@implementation OCBridgeModel
 - (void)callWithDict:(NSDictionary *)params {
     NSLog(@"Js调用了OC的方法，参数为：%@", params);
 }
@@ -57,14 +57,14 @@
 /**
  *  接收一个字符串然后判断是Pop还是Push
  *
- *  @param msg pop/push
+ *  @param msg modal/dismiss
  */
 - (void)popPushWithMessage:(NSString *)msg{
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([msg isEqualToString:@"pop"]) {
-            self.pop();
+        if ([msg isEqualToString:@"modal"]) {
+            self.modal();
         }else{
-            self.push();
+            self.dismiss();
         }
     });
 }
